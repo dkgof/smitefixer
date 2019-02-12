@@ -8,6 +8,8 @@ Put the jar in a folder somewhere.
 
 Create a file "run.bat" next to the jar file.
 
+Content of run.bat:
+
 <pre>
 @echo off
 cd "PATH-TO-DIRECTORY-WHERE-JAR-IS-LOCATED"
