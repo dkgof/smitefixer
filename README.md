@@ -19,3 +19,11 @@ And append the line:
 127.0.0.1 cds.q6u4m8x5.hwcdn.net
 
 to the end of hosts file and save. (Requires the editor to be opened as administrator)
+
+Double click run.bat
+
+In the terminal window should be:
+
+"Proxy running..."
+
+Now start smite and enjoy.
