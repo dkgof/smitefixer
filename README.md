@@ -8,9 +8,11 @@ Put the jar in a folder somewhere.
 
 Create a file "run.bat" next to the jar file.
 
+<pre>
 @echo off
 cd "PATH-TO-DIRECTORY-WHERE-JAR-IS-LOCATED"
 "PATH TO JAVA\java.exe" -jar SmiteFixer-1.0-SNAPSHOT.jar
+</pre>
 
 Now edit "C:\Windows\System32\drivers\etc\hosts"
 
