@@ -20,7 +20,9 @@ Now edit "C:\Windows\System32\drivers\etc\hosts"
 
 And append the line:
 
+<pre>
 127.0.0.1 cds.q6u4m8x5.hwcdn.net
+</pre>
 
 to the end of hosts file and save. (Requires the editor to be opened as administrator)
 
@@ -28,7 +30,9 @@ Double click run.bat
 
 In the terminal window should be:
 
+<pre>
 "Proxy running..."
+</pre>
 
 Now start smite and enjoy.
 
