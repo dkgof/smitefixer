@@ -27,3 +27,6 @@ In the terminal window should be:
 "Proxy running..."
 
 Now start smite and enjoy.
+
+For systems other than windows, the jar should still work, but some other means of redirecting
+cds.q6u4m8x5.hwcdn.net to 127.0.0.1 should be used, instead of the hosts file in windows dir.
