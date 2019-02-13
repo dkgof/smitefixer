@@ -1,40 +1,17 @@
 # smitefixer
 
-Install Java 11.
+This fixes smite login issues by proxying the downloads of season and ui textures from the hwcdn.net server.
 
-Download the jar from release.
+To run java 9 or later must be installed, and working from command line.
 
-Put the jar in a folder somewhere.
+(If you open a command prompt, and type <code>java -version</code> at least java 9 should be shown)
 
-Create a file "run.bat" next to the jar file.
+Then download the SmiteFixer.zip from the release tab, and unpack it somewhere and run the run.bat
 
-Content of run.bat:
+If it complains that the hosts file does not contain the correct line, run it as administrator and it will add it itself.
 
-<pre>
-@echo off
-cd "PATH-TO-DIRECTORY-WHERE-JAR-IS-LOCATED"
-"PATH TO JAVA\java.exe" -jar SmiteFixer-1.0-SNAPSHOT.jar
-</pre>
+When <code>Proxy running...</code> is showing in the console, its ready.
 
-Now edit "C:\Windows\System32\drivers\etc\hosts"
+Run smite.
 
-And append the line:
-
-<pre>
-127.0.0.1 cds.q6u4m8x5.hwcdn.net
-</pre>
-
-to the end of hosts file and save. (Requires the editor to be opened as administrator)
-
-Double click run.bat
-
-In the terminal window should be:
-
-<pre>
-"Proxy running..."
-</pre>
-
-Now start smite and enjoy.
-
-For systems other than windows, the jar should still work, but some other means of redirecting
-cds.q6u4m8x5.hwcdn.net to 127.0.0.1 should be used, instead of the hosts file in windows dir.
+If you would rather add to the hosts file yourself, add the line <code>127.0.0.1 cds.q6u4m8x5.hwcdn.net</code> to the end of <code>C:\Windows\System32\drivers\etc\hosts</code> using an editor run as Administrator.
