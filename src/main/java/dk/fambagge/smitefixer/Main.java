@@ -10,6 +10,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -29,7 +30,7 @@ public class Main {
         
         if(os.contains("windows")) {
             //Check hosts file
-            File hosts = new File("C:/Windows/System32/drivers/etc/hosts");
+            File hosts = new File(System.getenv("WINDIR")+"/System32/drivers/etc/hosts");
             
             if(hosts.exists()) {
                 try {
@@ -46,6 +47,13 @@ public class Main {
                     
                     if(!foundHostLine) {
                         try {
+                            File backupHosts = new File(hosts.getAbsolutePath()+".bak");
+                            
+                            System.out.println("Taking backup of hosts file into: "+backupHosts);
+                            
+                            //Take backup of hosts file
+                            Files.copy(hosts.toPath(), backupHosts.toPath(), StandardCopyOption.REPLACE_EXISTING);
+
                             System.out.println("Missing host line in hosts. Trying to fix...");
                             PrintWriter writer = new PrintWriter(new FileOutputStream(hosts, true));
 
