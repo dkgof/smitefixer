@@ -10,6 +10,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -92,8 +93,17 @@ public class Proxy implements Runnable {
                         writer.write("\r\n");
                         writer.flush();
                         
-                        in.transferTo(client.getOutputStream());
-                        client.getOutputStream().flush();
+                        OutputStream out = client.getOutputStream();
+                        
+                        byte[] buffer = new byte[1024];
+                        int length = in.read(buffer);
+                        
+                        while(length != -1) {
+                            out.write(buffer, 0, length);
+                            length = in.read(buffer);
+                        }
+                        
+                        out.flush();
                         
                         in.close();
                     }
