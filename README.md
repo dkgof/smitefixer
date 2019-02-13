@@ -2,9 +2,9 @@
 
 This fixes smite login issues by proxying the downloads of season and ui textures from the hwcdn.net server.
 
-To run java 9 or later must be installed, and working from command line.
+To run java 8 or later must be installed, and working from command line. (Java 8 works from release 1.1 and above)
 
-(If you open a command prompt, and type <code>java -version</code> at least java 9 should be shown)
+(If you open a command prompt, and type <code>java -version</code> at least java 8 should be shown)
 
 Then download the SmiteFixer.zip from the release tab, and unpack it somewhere and run the run.bat
 
